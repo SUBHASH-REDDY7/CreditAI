@@ -143,6 +143,20 @@ CreditAI is an educational and academic project developed for learning and demon
 **Application Type:** Machine Learning-Based Web Application  
 **Repository:** https://github.com/SUBHASH-REDDY7/CreditAI
 
+## 📸 Project Screenshots
+
+### 1. CreditAI Dashboard
+![Dashboard](screenshots/01_CreditAI_Dashboard.png)
+
+### 2. Analytics Dashboard
+![Analytics](screenshots/02_CreditAI_Dashboard.png)
+
+### 3. Good Credit Prediction
+![Good Credit](screenshots/03_CreditAI_Dashboard.png)
+
+### 4. Bad Credit Prediction
+![Bad Credit](screenshots/04_CreditAI_Dashboard.png)
+
 ---
 
 *Developed as an academic project to demonstrate Machine Learning, Flask-based application development, and Explainable Artificial Intelligence.*
