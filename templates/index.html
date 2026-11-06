@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Credit Intelligence</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>✦ CreditAI</h2>
+
+    <nav>
+        <a href="#overview">◈ Overview</a>
+        <a href="#prediction">◎ Risk Prediction</a>
+        <a href="#analytics">▥ Analytics</a>
+        <a href="#about">◉ About Model</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <span>ML Intelligence Platform</span>
+        <small>Version 1.0</small>
+    </div>
+</div>
+
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">MACHINE LEARNING PLATFORM</p>
+            <h1>AI Credit Intelligence</h1>
+            <p class="subtitle">
+                Intelligent Credit Risk Assessment System
+            </p>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            ML Model Ready
+        </div>
+    </header>
+
+    <section id="overview">
+
+        <h2>Dashboard Overview</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Applicants</p>
+                <h2 id="totalApplicants">--</h2>
+                <span>Historical records</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Good Credit</p>
+                <h2 id="goodApplicants">--</h2>
+                <span>Lower-risk historical category</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Bad Credit</p>
+                <h2 id="badApplicants">--</h2>
+                <span>Higher-risk historical category</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Best ML Model</p>
+                <h2 class="model-name">Logistic</h2>
+                <span>Selected by F1-score</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="prediction">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">AI POWERED ANALYSIS</p>
+                <h2>Credit Risk Prediction</h2>
+                <p class="subtitle">
+                    Enter applicant details to generate a prediction.
+                </p>
+            </div>
+        </div>
+
+        <form id="predictionForm">
+
+            <div class="form-grid">
+
+                {% for feature, rules in schema.items() %}
+
+                <div class="form-group">
+
+                    <label for="{{ feature }}">
+                        {{ feature.replace('_', ' ').title() }}
+                    </label>
+
+                    {% if rules.type == "category" %}
+
+                    <select
+                        id="{{ feature }}"
+                        name="{{ feature }}"
+                        required>
+
+                        {% for option in rules.options %}
+
+                        <option
+                            value="{{ option }}"
+                            {% if option == rules.default %}selected{% endif %}>
+                            {{ option.replace('_', ' ').title() }}
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                    {% else %}
+
+                    <input
+                        type="number"
+                        id="{{ feature }}"
+                        name="{{ feature }}"
+                        min="{{ rules.min }}"
+                        max="{{ rules.max }}"
+                        step="any"
+                        value="{{ rules.default }}"
+                        required>
+
+                    {% endif %}
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <button type="submit" id="predictButton">
+                ✦ Analyse Credit Risk
+            </button>
+
+        </form>
+
+        <div id="result" class="result-card hidden">
+
+            <p class="eyebrow">PREDICTION RESULT</p>
+
+            <h2 id="predictionLabel">--</h2>
+
+            <p id="predictionDescription"></p>
+
+            <div class="probability-container">
+
+                <div class="probability-row">
+                    <span>Good Credit score</span>
+                    <strong id="goodProbability">0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="goodBar" class="progress-good"></div>
+                </div>
+
+                <div class="probability-row">
+                    <span>Bad Credit score</span>
+                    <strong id="badProbability">0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="badBar" class="progress-bad"></div>
+                </div>
+
+            </div>
+
+            <p id="modelUsed"></p>
+
+            <p class="disclaimer">
+                Educational model estimate. Not a real-world
+                lending decision or calibrated default probability.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="analytics">
+
+        <h2>Credit Dataset Analytics</h2>
+
+        <div class="chart-card">
+            <h3>Credit Risk Distribution</h3>
+            <canvas id="creditChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>ML Model Performance Comparison</h3>
+            <canvas id="modelChart"></canvas>
+        </div>
+
+    </section>
+
+    <section id="about" class="about-card">
+
+        <h2>About the ML System</h2>
+
+        <p>
+            This application uses a Machine Learning pipeline
+            trained on the German Credit dataset.
+        </p>
+
+        <p>
+            Algorithms evaluated:
+            Logistic Regression, Decision Tree and Random Forest.
+        </p>
+
+        <p>
+            The selected model generates credit-risk estimates
+            from applicant financial information.
+        </p>
+
+    </section>
+
+    <footer>
+        AI Credit Intelligence | Machine Learning Internship Project
+    </footer>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

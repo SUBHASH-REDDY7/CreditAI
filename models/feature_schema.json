@@ -1,0 +1,176 @@
+{
+    "checking_status": {
+        "type": "category",
+        "options": [
+            "0<=X<200",
+            "<0",
+            ">=200",
+            "no checking"
+        ],
+        "default": "no checking"
+    },
+    "duration": {
+        "type": "number",
+        "default": 18.0,
+        "min": 4.0,
+        "max": 72.0
+    },
+    "credit_history": {
+        "type": "category",
+        "options": [
+            "all paid",
+            "critical/other existing credit",
+            "delayed previously",
+            "existing paid",
+            "no credits/all paid"
+        ],
+        "default": "existing paid"
+    },
+    "purpose": {
+        "type": "category",
+        "options": [
+            "business",
+            "domestic appliance",
+            "education",
+            "furniture/equipment",
+            "new car",
+            "other",
+            "radio/tv",
+            "repairs",
+            "retraining",
+            "used car"
+        ],
+        "default": "radio/tv"
+    },
+    "credit_amount": {
+        "type": "number",
+        "default": 2319.5,
+        "min": 250.0,
+        "max": 18424.0
+    },
+    "savings_status": {
+        "type": "category",
+        "options": [
+            "100<=X<500",
+            "500<=X<1000",
+            "<100",
+            ">=1000",
+            "no known savings"
+        ],
+        "default": "<100"
+    },
+    "employment": {
+        "type": "category",
+        "options": [
+            "1<=X<4",
+            "4<=X<7",
+            "<1",
+            ">=7",
+            "unemployed"
+        ],
+        "default": "1<=X<4"
+    },
+    "installment_commitment": {
+        "type": "number",
+        "default": 3.0,
+        "min": 1.0,
+        "max": 4.0
+    },
+    "personal_status": {
+        "type": "category",
+        "options": [
+            "female div/dep/mar",
+            "male div/sep",
+            "male mar/wid",
+            "male single"
+        ],
+        "default": "male single"
+    },
+    "other_parties": {
+        "type": "category",
+        "options": [
+            "co applicant",
+            "guarantor",
+            "none"
+        ],
+        "default": "none"
+    },
+    "residence_since": {
+        "type": "number",
+        "default": 3.0,
+        "min": 1.0,
+        "max": 4.0
+    },
+    "property_magnitude": {
+        "type": "category",
+        "options": [
+            "car",
+            "life insurance",
+            "no known property",
+            "real estate"
+        ],
+        "default": "car"
+    },
+    "age": {
+        "type": "number",
+        "default": 33.0,
+        "min": 19.0,
+        "max": 75.0
+    },
+    "other_payment_plans": {
+        "type": "category",
+        "options": [
+            "bank",
+            "none",
+            "stores"
+        ],
+        "default": "none"
+    },
+    "housing": {
+        "type": "category",
+        "options": [
+            "for free",
+            "own",
+            "rent"
+        ],
+        "default": "own"
+    },
+    "existing_credits": {
+        "type": "number",
+        "default": 1.0,
+        "min": 1.0,
+        "max": 4.0
+    },
+    "job": {
+        "type": "category",
+        "options": [
+            "high qualif/self emp/mgmt",
+            "skilled",
+            "unemp/unskilled non res",
+            "unskilled resident"
+        ],
+        "default": "skilled"
+    },
+    "num_dependents": {
+        "type": "number",
+        "default": 1.0,
+        "min": 1.0,
+        "max": 2.0
+    },
+    "own_telephone": {
+        "type": "category",
+        "options": [
+            "none",
+            "yes"
+        ],
+        "default": "none"
+    },
+    "foreign_worker": {
+        "type": "category",
+        "options": [
+            "no",
+            "yes"
+        ],
+        "default": "yes"
+    }
+}

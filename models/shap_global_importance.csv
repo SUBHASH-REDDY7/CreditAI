@@ -1,0 +1,62 @@
+Feature,Importance
+cat__checking_status_no checking,0.06817191794700463
+cat__checking_status_<0,0.056323660058506864
+num__installment_commitment,0.04646018925856591
+cat__credit_history_critical/other existing credit,0.045679230396441554
+num__duration,0.043072662668220206
+cat__personal_status_male single,0.04133568235375536
+num__credit_amount,0.03843369699696249
+cat__savings_status_<100,0.03799448851219061
+cat__purpose_used car,0.03434184471098853
+cat__housing_rent,0.034075476933063495
+cat__employment_4<=X<7,0.03216909129541464
+cat__property_magnitude_real estate,0.03121790785330731
+cat__property_magnitude_no known property,0.021485166390469337
+cat__purpose_new car,0.02006391068732418
+cat__other_payment_plans_none,0.019995699813053665
+cat__other_payment_plans_bank,0.018811907070735538
+cat__purpose_radio/tv,0.018641593407488645
+cat__savings_status_>=1000,0.016269862094341846
+cat__other_parties_co applicant,0.01548960107188467
+num__existing_credits,0.013559225096635763
+cat__other_parties_guarantor,0.012923452686788673
+cat__purpose_education,0.012123787106832318
+cat__own_telephone_yes,0.010813575653838985
+cat__property_magnitude_car,0.009919627890258027
+cat__checking_status_0<=X<200,0.009485936466226773
+cat__savings_status_100<=X<500,0.008981497823731178
+num__age,0.008115206634765584
+cat__foreign_worker_no,0.008013597586026527
+num__num_dependents,0.007877852489804549
+cat__foreign_worker_yes,0.007741512159720601
+cat__job_skilled,0.0073937440108470505
+cat__job_unskilled resident,0.006814451500845786
+cat__own_telephone_none,0.006683112905206882
+cat__employment_1<=X<4,0.006541603361291536
+cat__housing_for free,0.005583726268053526
+cat__job_unemp/unskilled non res,0.005042269339027048
+cat__credit_history_all paid,0.0047523052971745975
+cat__purpose_furniture/equipment,0.004687237582791587
+cat__employment_unemployed,0.004656221522136747
+cat__employment_<1,0.0044838006075030214
+cat__personal_status_female div/dep/mar,0.003675448137124635
+cat__credit_history_existing paid,0.0035762380933641513
+cat__property_magnitude_life insurance,0.00335549497249014
+cat__employment_>=7,0.0028695442691774368
+cat__housing_own,0.002866900625519431
+num__residence_since,0.002472084497565776
+cat__credit_history_delayed previously,0.002237934790059658
+cat__savings_status_500<=X<1000,0.0017441982371926793
+cat__checking_status_>=200,0.001600094894716797
+cat__purpose_business,0.0011916653727431542
+cat__personal_status_male mar/wid,0.0004029750159076424
+cat__other_parties_none,0.0001794676312346059
+cat__job_high qualif/self emp/mgmt,0.00016519123440500178
+cat__purpose_repairs,0.0
+cat__purpose_other,0.0
+cat__purpose_retraining,0.0
+cat__purpose_domestic appliance,0.0
+cat__credit_history_no credits/all paid,0.0
+cat__savings_status_no known savings,0.0
+cat__personal_status_male div/sep,0.0
+cat__other_payment_plans_stores,0.0
