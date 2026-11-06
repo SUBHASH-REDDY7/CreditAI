@@ -1,0 +1,1 @@
+CreditAI application screenshots.
